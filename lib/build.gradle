@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+    id 'io.quarkus'
+}
+
+repositories {
+     mavenLocal()
+     mavenCentral()
+}
+
+compileJava {
+    options.encoding = 'UTF-8'
+    options.compilerArgs << '-parameters'
+}
+
+compileTestJava {
+    options.encoding = 'UTF-8'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
+}
+
